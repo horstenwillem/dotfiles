@@ -1,0 +1,58 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Solarized Light",
+
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "alt",
+  "editor.tabSize": 2,
+  "editor.autoIndent": true,
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.fontSize": 12,
+  "editor.lineHeight": 0,
+  "editor.quickSuggestions": true,
+  "editor.quickSuggestionsDelay": 1,
+  "editor.mouseWheelScrollSensitivity": 1,
+  "editor.rulers": [0],
+  "editor.glyphMargin": true,
+  "editor.roundedSelection": false,
+  "editor.cursorStyle": "line",
+  "editor.cursorBlinking": "blink",
+  "editor.dragAndDrop": true,
+  "editor.wordWrap": "off",
+  "editor.wordWrapColumn": 170,
+  "editor.renderIndentGuides": true,
+  "window.restoreWindows": "all",
+
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.autoFixOnSave": true,
+  "eslint.nodePath": "/Users/poltak/.config/yarn/global/node_modules",
+
+  "terminal.external.osxExec": "iTerm.app",
+
+  "git.path": "/usr/local/bin/git",
+
+  "explorer.openEditors.visible": 0,
+
+  "files.trimTrailingWhitespace": true,
+
+  "extensions.autoUpdate": true,
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "*bundle.js*": true,
+    "*bundle.css*": true,
+    "**/.meteor": true,
+    "**/coverage": true
+  },
+
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "window.zoomLevel": 0,
+  "editor.renderControlCharacters": true,
+  "window.nativeTabs": true,
+  "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
+  "workbench.panel.location": "bottom"
+}

@@ -1,0 +1,5 @@
+*.cache
+node_modules
+chrome
+webstorm/settings.jar
+.vscode

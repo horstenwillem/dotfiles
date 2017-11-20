@@ -1,0 +1,119 @@
+[user]
+	name = willemhorsten
+
+[core]
+        abbrev = 12
+        attributesfile = ~/.gitattributes
+        excludesfile = ~/.gitignore
+        autocrlf = input
+        mergeoptions = --no-edit
+        ignoreCase = false
+
+[alias]
+        # Staging
+        aa = add --all
+
+        # Branch
+        br = branch
+
+        # Commit
+        c = commit
+        cm = commit -m
+
+        # Checkout
+        co = checkout
+        cb = checkout -b
+
+        # Diff
+        d = diff --color-words
+
+        # Merge
+        m = merge
+
+        # Pull
+        up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+
+        # Push
+        p = push
+
+        # Stash
+        st = stash
+        stp = stash pop
+
+        # Status/Logging
+        s = status
+        ss = status -sb
+        hist = log --graph --pretty=custom           # Show custom graph
+        l = log --pretty=custom                      # Show custom log
+        ll = log --stat --abbrev-commit
+        lc = shortlog --summary --numbered           # List contributors
+
+        # Reset
+        unstage = reset HEAD --                      # Mixed reset (affects HEAD and Index)
+        undo = reset --soft HEAD~1                   # Undo last commit (affects HEAD only)
+        reset = reset --hard HEAD~1                  # Remove last commit (from HEAD, Index and Working Dir)
+
+        # Remote
+        r = remote -v
+
+        # Misc
+        publish = "!git push --set-upstream origin $(git branch-name)"
+
+# So much color
+[color]
+        ui = always
+
+[color "branch"]
+        current = green bold
+        local = green
+        remote = yellow
+
+[color "diff"]
+        frag = magenta
+        meta = yellow
+        new = green
+        old = red
+
+[color "status"]
+        added = green reverse
+        changed = yellow reverse
+        untracked = red reverse
+
+# Git mergetool
+[merge]
+        tool = opendiff
+
+[pager]
+        # Insanely beautiful diffs ==> npm install -g diff-so-fancy
+        diff = diff-so-fancy | less --tabs=4 -RFX
+        show = diff-so-fancy | less --tabs=4 -RFX
+
+[diff "bin"]
+        # Use `hexdump` to diff binary files
+        textconv = hexdump -v -C
+
+[pretty]
+        custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+        #                     │        │            │            │             └─ author name
+        #                     │        │            │            └─ message
+        #                     │        │            └─ date (relative)
+        #                     │        └─ decorations (branch, heads or tags)
+        #                     └─ hash (abbreviated)
+
+[help]
+        # Correct typos
+        autocorrect = 1
+
+# Push easily http://stackoverflow.com/a/23918418/89484
+[push]
+        # Make `git push` automatically push relevant
+        # annotated tags when pushing branches out
+        followTags = true
+        default = current
+
+# Use separate file for username / github token / etc
+[include]
+        path = ~/.gitconfig.local
+
+[fetch]
+        prune = true
