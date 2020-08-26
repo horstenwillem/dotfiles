@@ -41,8 +41,6 @@ apps=(
     git-flow-avh
     heroku
     mongodb
-    postgresql
-    thefuck
     z
     zsh
 )

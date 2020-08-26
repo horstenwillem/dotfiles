@@ -32,7 +32,6 @@ packages=(
   diff-so-fancy
   jest
   nodemon
-  sequelize-cli
 )
 
 npm install -g "${packages[@]}"

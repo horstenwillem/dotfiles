@@ -269,9 +269,6 @@ ln -s "$DOTFILES_DIR/vscode/snippets" "$vscode_dir"
 # Terminal & iTerm 2                                                          #
 ###############################################################################
 
-# Install the Solarized Dark theme for iTerm
-open "${HOME}/dotfiles/iterm/themes/Solarized Dark.itermcolors"
-
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 

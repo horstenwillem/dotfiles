@@ -39,7 +39,7 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Disable some menu bar icons: Time Machine, Volume and User
+# Disable some menu bar icons: Time Machine, Volume
 for domain in ~/Library/Preferences/ByHost/com.apple.stytemuiserver.*; do
   "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
   "/System/Library/CoreServices/Menu Extras/Volume.menu" \
@@ -64,14 +64,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screenshots"
 defaults write com.apple.screencapture type -string "png"
 
-# Enable sub-pixel rendering on non-Apple LCDs.
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-# Disable and kill Dashboard
-# Can be reverted with:
-# defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Doc
-defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock
-
 ###############################################################################
 # Finder
 ###############################################################################
@@ -90,9 +82,6 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Disable the warning when changing file extensions
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
